@@ -5741,6 +5741,45 @@ style='font-size:8.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
 </div>
 
 </body>
-<p align="center"> <img src="https://komarev.com/ghpvc/?mathnature=GITHUB-USERNAME&label=Profile%20views&color=ce9927&style=flat" alt="GITHUB-USERNAME" /> </p>	
+<p align="center"> <img src="https://komarev.com/ghpvc/?USERNAME=GITHUB-USERNAME&label=Profile%20views&color=ce9927&style=flat" alt="GITHUB-USERNAME" /> </p>	
 <script async src="//githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.min.js"></script>
+
+var start = new Date().getTime();
+
+
+function updateTime() {
+  var now = new Date().getTime();
+  var elapsed = now - start;
+  var formatted = secondsToTime(elapsed/1000);
+  $elapsed.html(formatted.h + ':' + formatted.m + ':' + formatted.s);
+  setTimeout(updateTime, 1000);
+}
+
+
+function secondsToTime(secs) {
+  var hours = Math.floor(secs / (60 * 60));
+
+  var divisor_for_minutes = secs % (60 * 60);
+  var minutes = Math.floor(divisor_for_minutes / 60);
+
+  var divisor_for_seconds = divisor_for_minutes % 60;
+  var seconds = Math.ceil(divisor_for_seconds);
+
+  if (minutes < 10) {
+    minutes = '0' + minutes;
+  }
+
+  if (seconds < 10) {
+    seconds = '0' + seconds;
+  }
+
+  var obj = {
+    "h": hours,
+    "m": minutes,
+    "s": seconds
+  };
+  return obj;
+}
+
+updateTime();​
 </html>
