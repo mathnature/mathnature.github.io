@@ -84,24 +84,6 @@ a:active {
 -->
 </style>
 
-<html lang="en">
-<head>
-    <script>
-        // 初始化一个cookie来追踪访问者
-        let visitorCountKey = 'visitorCount';
-        let visitorCount = parseInt(localStorage.getItem(visitorCountKey)) || 0;
-        visitorCount++;
-        localStorage.setItem(visitorCountKey, visitorCount.toString());
-         // 页面加载完成后显示消息
-        window.onload = function() {
-            document.getElementById('visitorCount').textContent = `Welcome to Mathematics & Nature，You are the ${visitorCount}th visitor since May 31, 2024!`;
-        };
-    </script>
-</head>
-<body>
-    <p id="visitorCount">Welcome to <strong>Mathematics &amp; Nature</strong>，You are the <strong style="color: #AA06C7">18th</strong> visitor since May 31, 2024!</p>
-</body>
-
 </head>
 
 <body bgcolor="#E1FCFF" lang=ZH-CN link="#0563C1" vlink="#954F72"
