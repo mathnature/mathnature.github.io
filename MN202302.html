@@ -1,40 +1,4 @@
 <!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <div id="app">
-       <input type="button" value="-" v-on:click="sub">
-       <span>{{num}}</span>
-       <button @click="add">+</button>
-    </div>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
-        
-    </script>
-    <script>
-       var app= new Vue({
-        el:"#app",
-        data:{
-            num:1
-        },
-        methods:{
-            add:function(){
-                if(this.num<10)
-                {this.num++;}
-                else
-                {alert("不能再加啦");}
-            },
-            sub:function(){
-                if(this.num>0)
-                {this.num--;}
-                else
-                {alert("到底啦");}
-            }
-        }
-       })
-    </script>
-</html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8"/>
@@ -8446,7 +8410,33 @@ pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
 <!-- hitwebcounter Code START -->
 <a href="https://www.hitwebcounter.com" target="_blank">
 <img src="https://hitwebcounter.com/counter/counter.php?page=13300781&style=0002&nbdigits=9&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>
+
+    </script>
+    <script>
+       var app= new Vue({
+        el:"#app",
+        data:{
+            num:1
+        },
+        methods:{
+            add:function(){
+                if(this.num<10)
+                {this.num++;}
+                else
+                {alert("不能再加啦");}
+            },
+            sub:function(){
+                if(this.num>0)
+                {this.num--;}
+                else
+                {alert("到底啦");}
+            }
+        }
+       })
+    </script>    
+
 </center>
+
 
 </div>
   
