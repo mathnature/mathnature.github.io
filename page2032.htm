@@ -295,9 +295,9 @@ text-decoration:none'>12</span></a></span></p>
     <script>
         // 检查LocalStorage中是否有访问记录
         if (localStorage.getItem('visitCounts') === null) {
-            // 如果没有访问记录，初始化为0
-            localStorage.setItem('totalVisits', 0);
-            localStorage.setItem('uniqueVisits', 0);
+            // 如果没有访问记录，初始化为300
+            localStorage.setItem('totalVisits', 900);
+            localStorage.setItem('uniqueVisits', 300);
         }
  
         function updateVisitCounts() {
