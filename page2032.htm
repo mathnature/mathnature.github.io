@@ -241,54 +241,6 @@ text-decoration:none'>12</span></a></span></p>
 <!-- 不蒜子计数 -->	
 </center>
 
-	<title>访问量统计</title>
-    <script>
-        // 检查是否已有访问次数cookie
-        function getCookie(name) {
-            var value = "; " + document.cookie;
-            var parts = value.split("; " + name + "=");
-            if (parts.length === 2) return parts.pop().split(";").shift();
-        }
- 
-        // 设置访问次数cookie
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
- 
-        // 更新访问量统计
-        function updateStats() {
-            var totalVisits = getCookie('totalVisits') || 0;
-            totalVisits++;
-            setCookie('totalVisits', totalVisits, 1); // 保存并设置有效期为1天
- 
-            var uniqueVisits = getCookie('uniqueVisits') || 0;
-            if (!getCookie('visitedBefore')) {
-                uniqueVisits++;
-                setCookie('uniqueVisits', uniqueVisits, 1);
-                setCookie('visitedBefore', true, 1); // 设置cookie以追踪是否是首次访问
-            }
- 
-            // 显示访问量
-            document.getElementById('totalVisits').textContent = totalVisits;
-            document.getElementById('uniqueVisits').textContent = uniqueVisits;
-        }
- 
-        // 页面加载时更新统计数据
-        window.onload = updateStats;
-    </script>
-</head>
-<body>
-    <h1>欢迎来到我的网站</h1>
-    <p>总访问量：<span id="totalVisits">加载中...</span></p>
-    <p>独立用户访问量：<span id="uniqueVisits">加载中...</span></p>
-</body>
-
 
 </!--- - ------  --/>
     <title>Visit Counter</title>
