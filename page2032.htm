@@ -289,3 +289,48 @@ text-decoration:none'>12</span></a></span></p>
     <p>独立用户访问量：<span id="uniqueVisits">加载中...</span></p>
 </body>
 </html>
+
+</!--- - ------  --/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visit Counter</title>
+    <script>
+        // 检查LocalStorage中是否有访问记录
+        if (localStorage.getItem('visitCounts') === null) {
+            // 如果没有访问记录，初始化为0
+            localStorage.setItem('totalVisits', 0);
+            localStorage.setItem('uniqueVisits', 0);
+        }
+ 
+        function updateVisitCounts() {
+            var totalVisits = localStorage.getItem('totalVisits');
+            var uniqueVisits = localStorage.getItem('uniqueVisits');
+            var currentVisitorIP = '123.123.123.123'; // 假设的当前访问者IP地址
+ 
+            // 更新总访问量
+            localStorage.setItem('totalVisits', parseInt(totalVisits, 10) + 1);
+ 
+            // 检查是否已经记录了当前IP
+            if (localStorage.getItem('visitedIPs') === null || !localStorage.getItem('visitedIPs').includes(currentVisitorIP)) {
+                // 如果没有，更新独立访问量
+                localStorage.setItem('uniqueVisits', parseInt(uniqueVisits, 10) + 1);
+                // 并记录当前IP
+                var visitedIPs = localStorage.getItem('visitedIPs') || '';
+                localStorage.setItem('visitedIPs', visitedIPs + currentVisitorIP + ',');
+            }
+ 
+            // 显示访问量
+            document.getElementById('totalVisits').textContent = localStorage.getItem('totalVisits');
+            document.getElementById('uniqueVisits').textContent = localStorage.getItem('uniqueVisits');
+        }
+ 
+        window.onload = updateVisitCounts;
+    </script>
+</head>
+<body>
+    <p>累计访问量：<span id="totalVisits">加载中...</span></p>
+    <p>累计独立访问量：<span id="uniqueVisits">加载中...</span></p>
+</body>
+</html>
