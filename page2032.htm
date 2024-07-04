@@ -234,11 +234,29 @@ text-decoration:none'>12</span></a></span></p>
 </body>
 
 <center>
-<!-- 不蒜子计数 -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv" style='display:none'> Total Visitors: <span id="busuanzi_value_site_pv"></span>  </span>
-<span id="busuanzi_container_site_uv" style='display:none'>| Unique Visitors: <span id="busuanzi_value_site_uv"></span>  </span>
-<!-- 不蒜子计数 -->	
+<script>
+function initCounter() {
+    const counterKey = "accessCounter";
+    let counter = localStorage.getItem(counterKey);
+    if (!counter) {
+        counter = "000000001"; // 初始化计数器值
+        localStorage.setItem(counterKey, counter);
+    }
+    document.getElementById("accessCounter").textContent = counter;
+}
+function updateCounter() {
+    const counterKey = "accessCounter";
+    let counter = localStorage.getItem(counterKey);
+    counter = String(parseInt(counter) + 1); // 增加计数器值
+    counter = counter.padStart(9, '0'); // 确保计数器总是9位
+    localStorage.setItem(counterKey, counter);
+    document.getElementById("accessCounter").textContent = counter;
+}
+</script>
+<body onload="initCounter()">
+<a>总访问次数：<span id="accessCounter"></span></a>
+<script>updateCounter();</script> <!-- 在页面加载时更新计数器 -->
+</body>
 </center>
 
 <center><a href="https://info.flagcounter.com/I2Cz"><img src="https://s11.flagcounter.com/count/I2Cz/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_18/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
