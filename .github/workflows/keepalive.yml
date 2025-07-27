@@ -1,0 +1,9 @@
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # 每月1日运行
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "自动化保活" >> keepalive.log
+      - uses: stefanzweifel/git-auto-commit-action@v4
