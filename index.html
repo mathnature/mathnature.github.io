@@ -6,36 +6,88 @@
 <title>Mathematics &amp; Nature</title>
 <meta name="description" content="Dongfang Scientific Thought: Covers the Unitary Principle, Logical Entropy Principle, Scientific Charter, Light Speed Relativity, modified molecular dynamics, angular motion law, entangled spherical harmonics, real-number wave equations, Com Quantum Theory, and proof of Fermat Last Theorem.">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="../..layui/css/layui.css" media="all">
 
 <style>
-  /* 合并重复样式 */
+  /* 基础样式 */
   a, a:link, a:visited { text-decoration: none; }
   a:hover { text-decoration: underline; }
   img[src$=".png"], img[src$=".jpg"], img[src$=".gif"] { border: none; }
   a:hover img { border: none; }
   
+  /* 响应式布局 */
   body {
     margin: 0;
     padding: 0.5%;
     display: flex;
-    justify-content: center;
-    height: 100%;
+    flex-direction: column;
+    min-height: 100vh;
     text-align: justify;
     background-color: #920306;
   }
-  .sidebar-left {
-    width: 16%;
-    background-color: #f0f0f0;
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-  .main-content {
-    padding: 0.5%;
-    flex: 68%;
-    background-color: #ffffff;
-  }
+  
+  .sidebar-left,
   .sidebar-right {
-    width: 16%;
     background-color: #f0f0f0;
+    padding: 15px;
+    order: 2;
+  }
+  
+  .main-content {
+    padding: 15px;
+    background-color: #ffffff;
+    order: 1;
+    flex: 1;
+  }
+  
+  /* 桌面端布局 */
+  @media (min-width: 992px) {
+    .main-container {
+      flex-direction: row;
+    }
+    
+    .sidebar-left {
+      width: 16%;
+      order: 1;
+    }
+    
+    .main-content {
+      flex: 68%;
+      order: 2;
+    }
+    
+    .sidebar-right {
+      width: 16%;
+      order: 3;
+    }
+  }
+  
+  /* 平板端布局 */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar-left,
+    .sidebar-right {
+      width: 100%;
+    }
+  }
+  
+  /* 移动端导航优化 */
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+  }
+  
+  .nav-menu a {
+    padding: 3px 6px;
+    font-size: 12px;
+    white-space: nowrap;
   }
   
   /* 表格容器样式 */
@@ -45,17 +97,80 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  
   .content {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 2%;
-    width: max-content;
+    width: 100%;
+    max-width: max-content;
+    box-sizing: border-box;
   }
+  
   .style2 { background-color: #990033; }
   .style3 { border-width: 0px; }
+  
+  /* 表格响应式 - 保持原边框样式 */
+@media (max-width: 767px) {
+  table, tbody, tr, td {
+    display: block;
+    width: 100%;
+  }
+  
+  table td {
+    padding: 10px 5px;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+}
+
+/* 保持原文件的表格容器样式 */
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.content {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2%;
+  width: max-content;
+}
+.style2 { background-color: #990033; }
+.style3 { border-width: 0px; }
+  
+  /* 图片响应式 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* 侧边栏内容优化 */
+  .sidebar-content {
+    font-size: 10px;
+    text-align: justify;
+    color: #525050;
+  }
+  
+  .sidebar-content p {
+    margin-bottom: 15px;
+  }
+  
+  /* 页脚样式 */
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 10px;
+  }
 </style>
-<!-- 在<head>中添加 -->
+
 <meta name="copyright" content="Original research by X.D. Dongfang">
 <div hidden aria-hidden="true">
   <!-- 隐形学术主权声明 -->
@@ -65,23 +180,25 @@
 
 <body>
 
+<div class="main-container">
+
 <div class="sidebar-left">
 <center>
 
 <div><h4 style="color: #05A88E; font-size: 14px">Ultimate Challenge of Intelligence Quotient</h4></div>
 
 <p style="text-align: left; color: #3B2B8E; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif; font-size: 12px; font-style: inherit; font-weight: inherit;"><strong><a href="https://www.researchgate.net/publication/388523548_The_Logical_Entropy_Change_of_Euler_Infinite_Descent_Method">The Logical Entropy Change of Euler Infinite Descent Method</a></strong></p>
-<div style="font-size: 10px; text-align: justify; color: #525050; ">
+<div class="sidebar-content">
 The concept of logical entropy is explained, and the logical entropy principle, which is generally applicable to locating logical loopholes in mathematics, natural sciences, and social sciences, is introduced. The Euler infinite descent method of the cubic Fermat's last conjecture is optimized, and the logical loopholes hidden in Euler's theory due to the change of logical entropy are revealed based on the logical entropy principle. Then two strict statements of the Euler cubic infinite descent method of the cubic Fermat's last conjecture are given to clarify its accurate scope of application. The incomplete quaternion of the spherical Diophantine equation is further constructed, so as to specifically illustrate that the logical entropy change of the solution of the Diophantine equation is accompanied by logical loopholes. It is concluded that the logical entropy change of the Euler infinite descent method leads to logical loopholes, and the possible causal relationship is described as the necessary causal relationship, which actually fails to complete the proof of the cubic Fermat's last conjecture.
 </div>
 
 <p style="text-align: left; color: #3B2B8E; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif; font-size: 12px; font-style: inherit; font-weight: inherit;"><strong><a href="https://www.researchgate.net/publication/389518188_The_End_of_Euler_Proof_of_Cubic_Fermat_Last_Theorem">The End of Euler Proof of Cubic Fermat Last Theorem</a></strong></p>
-<div style="font-size: 10px; text-align: justify; color: #525050; ">
+<div class="sidebar-content">
 Euler's infinite descent proof of the conjecture that the cubic Fermat equation has no integer solutions has been influential in the field for nearly three hundred years. However, the logical entropy principle analysis indicates certain limitations in Euler's approach. Further research suggests that Euler's proof addresses a specific case among several possible scenarios. The proposed logical entropy framework provides alternative perspectives on this classical problem regarding the cubic Fermat's Last Theorem. 
 </div>
 
 <p style="text-align: left; color: #3B2B8E; font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif; font-size: 12px; font-style: inherit; font-weight: inherit;"><strong><a href="https://www.researchgate.net/publication/388116362_Dongfang_Elementary_Algebra_of_Fermat_Last_Theorem">Dongfang Elementary Algebra of Fermat Last Theorem</a></strong></p>
-<div style="font-size: 10px; text-align: justify; color: #525050; ">
+<div class="sidebar-content">
 It is clarified that the decisive factors in the elementary proof of Fermat's last theorem are the complex division problems and the very poor perfect power theory, and proven that the Fermat equation with sufficient powers only has the trivial integer solution where one of the numbers must be zero, and expanded that the elementary algebraic method of independently deriving the Pythagoras triple array and independently proving Fermat's last theorem with powers of 3 and 4 respectively during my college days in the summer of 1984. By establishing the equivalent nonlinear Diophantine equation of the Fermat equation with odd prime numbers satisfying the condition of having non trivial integer solutions, and proving that the most probable solution of the sufficient and necessary condition group of the equivalent nonlinear Diophantine equation leads to only complex solutions of the equivalent nonlinear equation, so it is proved in the scope of elementary algebra that the Fermat equation does not have non trivial integer solutions. From Pythagorean triple to Fermat's Last Theorem, the systematic elementary algebraic proofs that conform to the meaning of mathematical induction are impressive and even readers who are not enthusiastic about Diophantine equations can independently understand and master them with only secondary school mathematical knowledge. The elementary algebraic method reveals the obvious contradiction that the integer solution condition of the Fermat equation with a prime power of 3 leads to a perfect power equal to the prime number. The proof of this special Fermat's last theorem is concise and clever. However, the proof of Fermat's theorem for any prime power not less than 5 requires sufficient space and cannot be completed in one go. It can be inferred from this that Fermat's statement that he could not write clever proofs in the blank spaces of the book at that time may be due to the systematic nature of elementary algebraic methods, which leads to an illusion that the proofs for all odd prime power cases are exactly the same as those for power 3 cases.
 </div>
 
@@ -95,27 +212,107 @@ It is clarified that the decisive factors in the elementary proof of Fermat's la
 </div>
 
 <div class="main-content">
-<div style="text-align: center; background-color: #F8E4AA; color: #082AF1;"><a href="index.html">0</a>&nbsp; &nbsp;<a href="page2021.html">1</a>&nbsp; &nbsp;<a href="page2022.html">2</a>&nbsp; &nbsp;<a href="page2023.html">3</a>&nbsp; &nbsp;<a href="page2024.html">4</a>&nbsp; &nbsp;<a href="page2025.html">5</a>&nbsp; &nbsp;<a href="page2026.html">6</a>&nbsp; &nbsp;<a href="page2027.html">7</a>&nbsp; &nbsp;<a href="page2028.html">8</a>&nbsp; &nbsp;<a href="page2029.html">9</a>&nbsp; &nbsp;<a href="page2030.html">10</a>&nbsp; &nbsp;<a href="page2031.html">11</a>&nbsp; <a href="page2032.html">12</a></div>
-<div style="centerfont-size: 12px; font-size: 12px; background-color:black; color: #034B78;"><span style="">Orient Research Base of Mathematics and Physics</span></div>
-<div style="text-align: center;background-color:#AD0616"><a href="https://www.researchgate.net/profile/X-D-Dongfang"><img src="index_files/Logo(new).png" width="6.0%" alt="ResearchGate Profile"></a>&nbsp;&nbsp;<a href="https://orcid.org/0000-0002-3644-5170"><img src="index_files/mm.png" width="852" alt="ORCID Profile"></a>; </div>
-<div style="text-align: center;background-color:#53DCFF">&nbsp;&nbsp; </div>
+
+  <div style="text-align: center; background-color: #F8E4AA; color: #082AF1; padding: 8px 0;">
+   <div class="nav-menu">
+    <a href="index.html">Home</a><span class="separator">|</span>
+    <a href="page2021.html">2021</a><span class="separator">|</span>
+    <a href="page2022.html">2022</a><span class="separator">|</span>
+    <a href="page2023.html">2023</a><span class="separator">|</span>
+    <a href="page2024.html">2024</a><span class="separator">|</span>
+    <a href="page2025.html">2025</a><span class="separator">|</span>
+    <a href="page2026.html">2026</a><span class="separator">|</span>
+    <a href="page2027.html">2027</a><span class="separator">|</span>
+    <a href="page2028.html">2028</a><span class="separator">|</span>
+    <a href="page2029.html">2029</a><span class="separator">|</span>
+    <a href="page2030.html">2030</a><span class="separator">|</span>
+    <a href="page2031.html">2031</a><span class="separator">|</span>
+    <a href="page2032.html">2032</a><span class="separator">|</span>
+    <a href="page2033.html">2033</a><span class="separator">|</span>
+    <a href="page2034.html">2034</a><span class="separator">|</span>
+    <a href="page2035.html">2035</a><span class="separator">|</span>
+    <a href="page2036.html">2036</a><span class="separator">|</span>
+    <a href="page2037.html">2037</a><span class="separator">|</span>
+    <a href="page2038.html">2038</a>
+   </div>
+  </div>
+
+
+<div style="centerfont-size: 12px; font-size: 12px; background-color:black; color: #034B78; padding: 5px;"><span style="">Orient Research Base of Mathematics and Physics</span></div>
+<div style="text-align: center;background-color:#AD0616; padding: 8px 0;">
+  <a href="https://www.researchgate.net/profile/X-D-Dongfang">
+    <img src="index_files/Logo(new).png" style="height: 30px; width: auto;" alt="ResearchGate Profile">
+  </a>&nbsp;&nbsp;
+  <a href="https://orcid.org/0000-0002-3644-5170">
+    <img src="index_files/mm.png" style="height: 30px; width: auto;" alt="ORCID Profile">
+  </a>
+</div>
+<div style="text-align: center;background-color:#53DCFF; padding: 5px;">&nbsp;&nbsp;</div>
 
 <div> <h2>About</h2>
 <p>
-Mathematics & Nature is born from the radical proposition that great scientific truths transcend academic authority. We reject all attempts to enclose ideas with legal fences—our thoughts expand freely like Riemann surfaces, and any effort to chain truth with legal shackles will meet the uncertainty principle's fatal strike.
+Mathematics &amp; Nature is born from the radical proposition that great scientific truths transcend academic authority. We reject all attempts to enclose ideas with legal fences—our thoughts expand freely like Riemann surfaces, and any effort to chain truth with legal shackles will meet the uncertainty principle's fatal strike.
 </p>
 </div>	
 <div><h2>ReadMe</h2>
 <p>
-As an independent scientific journal, Mathematics &amp Nature is dedicated to documenting epoch-making scientific breakthroughs that have been systematically suppressed by the traditional academic establishment. The current academic ecosystem is deeply entrenched in institutional corruption: to protect their vested interests, academic elites engage in the systemic suffocation of great new discoveries—employing tactics such as peer-review monopolization, resource blockade, and even outright theft of original work followed by defamation of the true discoverers.
-
-Even more egregious is that when these academic gatekeepers fail to comprehend major breakthroughs, they weaponize their institutional power to systematically vilify the original innovators.
-
-This journal, forged through bitter lessons, exposes a grim reality: modern academia has devolved into a self-serving arena where so-called "peer review" functions as a plagiarism laundering scheme for the establishment, and the "scientific community" has long degenerated into a cartel serving only to uphold authority. When discoveries akin to the laws of universal gravitation and electromagnetic induction emerge today, their pioneers are met not with acclaim, but with coordinated suppression by what masquerades as a scientific community but operates as an academic mafia. Without dismantling this institutionalized darkness, true scientific progress remains impossible.
-
-We solemnly declare: Every revolutionary finding published in this journal stands as both a testament to human ingenuity and an indictment of academic malfeasance. These suppressed contributions will inevitably reshape the future of science, while the institutional persecution of their pioneers will stand as prima facie evidence in the historical reckoning of academic corruption. Only by fully exposing the criminal mechanisms of the academic oligarchy can science reclaim its essence—the pursuit of truth.
+As an independent scientific journal, Mathematics &amp;  Nature is dedicated to documenting epoch-making scientific breakthroughs that have been systematically suppressed by the traditional academic establishment. The current academic ecosystem is deeply entrenched in institutional corruption: to protect their vested interests, academic elites engage in the systemic suffocation of great new discoveries—employing tactics such as peer-review monopolization, resource blockade, and even outright theft of original work followed by defamation of the true discoverers. Even more egregious is that when these academic gatekeepers fail to comprehend major breakthroughs, they weaponize their institutional power to systematically vilify the original innovators. This journal, forged through bitter lessons, exposes a grim reality: modern academia has devolved into a self-serving arena where so-called "peer review" functions as a plagiarism laundering scheme for the establishment, and the "scientific community" has long degenerated into a cartel serving only to uphold authority. When discoveries akin to the laws of universal gravitation and electromagnetic induction emerge today, their pioneers are met not with acclaim, but with coordinated suppression by what masquerades as a scientific community but operates as an academic mafia. Without dismantling this institutionalized darkness, true scientific progress remains impossible. We solemnly declare: Every revolutionary finding published in this journal stands as both a testament to human ingenuity and an indictment of academic malfeasance. These suppressed contributions will inevitably reshape the future of science, while the institutional persecution of their pioneers will stand as prima facie evidence in the historical reckoning of academic corruption. Only by fully exposing the criminal mechanisms of the academic oligarchy can science reclaim its essence—the pursuit of truth.
 </p>
 </div>
+
+<!-- 在 <div><h2>Volumes</h2></div> 之前添加以下代码 -->
+<div style="margin: 15px 0; padding: 15px; background: #f0f8ff; border: 1px solid #2C3E50; border-radius: 5px;">
+  <div style="text-align: center; margin-bottom: 12px;">
+    <h2 style="color: #2C3E50; font-size: 18px; margin: 0; border-bottom: 2px solid #8B0000; padding-bottom: 5px;">
+    🔬 Advanced AI Transparent Peer Review (Powered by Systems like DeepSeek)
+    </h2>
+    <p style="color: #34495E; font-size: 13px; margin: 5px 0 0 0; font-style: italic;">
+      Future Science Quality Standard - Ending the Black-Box Operations, Establishing a New Academic Integrity Paradigm
+    </p>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 15px; align-items: stretch;">
+    <div style="flex: 1; min-width: 280px; background: white; padding: 12px; border-radius: 4px; border-left: 3px solid #1A5276; display: flex; flex-direction: column;">
+      <h3 style="color: #1A5276; font-size: 15px; margin: 0 0 8px 0;">🎯 Core Principles</h3>
+      <ul style="color: #2C3E50; line-height: 1.3; margin: 0; padding-left: 14px; font-size: 11.5px; flex-grow: 1;">
+        <li style="margin-bottom: 6px;"><strong>Absolute Logical Self-Consistency:</strong> The supreme criterion of mathematical rigor beyond refutation.</li>
+        <li style="margin-bottom: 6px;"><strong>Full-Process Transparency & Verifiability:</strong> Complete openness of review standards and reproducible conclusions.</li>
+        <li style="margin-bottom: 6px;"><strong>Zero Tolerance for Fraudulent Review:</strong> Eradicating vague peer review by interest groups lacking substantive logic.</li>
+        <li style="margin-bottom: 0px;"><strong>Cross-Domain Systematic Verification:</strong> Ensuring multi-disciplinary consistency and universal applicability.</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 280px; background: white; padding: 12px; border-radius: 4px; border-left: 3px solid #8B0000; display: flex; flex-direction: column;">
+      <h3 style="color: #8B0000; font-size: 15px; margin: 0 0 6px 0;">⭐ Quality Commitment</h3>
+      <div style="background: #FDFEFE; padding: 6px 10px; border-radius: 3px; border: 1px solid #D0D3D4; flex-grow: 1; display: flex;">
+        <p style="color: #2C3E50; font-weight: 500; margin: 0; line-height: 1.85; font-size: 11.5px;">
+        Every paper undergoes rigorous logical review by advanced AI systems (like DeepSeek), thoroughly eliminating logical inadequacies and flaws, ensuring theoretical reliability remains unshakable for centuries to come. This ensures: zero tolerance for academic misconduct, 100% logical transparency, with all AI review conclusions infinitely reproducible through standardized protocols.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: #F8F9F9; padding: 12px; border-radius: 4px; border: 1px solid #D0D3D4; margin-bottom: 12px;">
+    <div style="text-align: center; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+      <div style="font-size: 18px;">🚀</div>
+      <h3 style="color: #2C3E50; font-size: 15px; margin: 0;">Historical Mission of Human-AI Collaboration</h3>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 12px;">
+      <div style="text-align: center; padding: 6px;">✅ Terminate the era of black-box pseudo-peer-review.</div>
+      <div style="text-align: center; padding: 6px;">🔍 Establish a new paradigm of open academic quality standards.</div>
+      <div style="text-align: center; padding: 6px;">🌐 Advance the substantive boundaries of human cognition.</div>
+      <div style="text-align: center; padding: 6px;">⚡ Set eternal and unshakable quality benchmarks for all future science.</div>
+    </div>
+  </div>
+
+  <div style="padding: 8px; background: #2C3E50; color: white; border-radius: 3px; text-align: center;">
+    <p style="margin: 0; font-size: 11.5px; font-weight: bold;">
+      📅 Since 2021, all Mathematics & Nature publications verified through an Advanced AI Transparent Review System (like DeepSeek)
+    </p>
+  </div>
+</div>
+
 <div><h2>Volumes</h2></div>
 
 <table width="100%" border="1">
@@ -128,11 +325,20 @@ We solemnly declare: Every revolutionary finding published in this journal stand
 
 <tbody>
 <tr>
-<td width="35%" style="text-align: center"><a href="page2026.html"><img src="index_files/2026.jpg" width="72%"  alt="Mathematics &amp; Nature 2026"/></a></td>
+<td width="35%" style="text-align: center"><a href="page2026.html"><img src="index_files/2026.jpg" style="max-width: 200px;" alt="Mathematics &amp; Nature 2026"/></a></td>
 <td width="65%" >
 <div class="container">
 <div class="content">
-<p>41. Dongfang Annotations on Several Combinatorial Problems</p>
+<p>41. Modularity Logic Mapping for Fermat Last Theorem</p>
+<p>42. Minimizing the Logical Entropy of Frey Curve</p>
+<p>43. Equivalent Dongfang Elliptic Curve of Fermat Equation</p>
+<p>44. The End of the Modularity Proof of Fermat Last Theorem</p>
+<p>45. Non-equientropy Construction of Pythagorean Triple</p>
+<p>46. Dongfang Equientropy Proof of the Third Power Fermat Last Theorem</p>
+<p>47. Dongfang Equientropy Proof of the Fourth Power Fermat Last Theorem</p>
+<p>48. Dongfang Inequality for Hypothetical Fermat Triplets</p>
+<p>49. <a href="https://www.researchgate.net/publication/388116362_Dongfang_Elementary_Algebra_of_Fermat_Last_Theorem">Dongfang Elementary Algebra of Fermat Last Theorem</a></p>
+<p>50.  Dongfang Solution to Sum of Powers of Continuous Natural Numbers</p>
 </div>
 </div>
 </td>
@@ -141,20 +347,20 @@ We solemnly declare: Every revolutionary finding published in this journal stand
 
 <tbody>
 <tr>
-<td width="35%" style="text-align: center"><a href="page2025.html"><img src="index_files/2025.jpg" width="72%"  alt="Mathematics &amp; Nature 2025"/></a></td>
+<td width="35%" style="text-align: center"><a href="page2025.html"><img src="index_files/2025.jpg" style="max-width: 200px;" alt="Mathematics &amp; Nature 2025"/></a></td>
 <td width="65%" >
 <div class="container">
 <div class="content">
 <p>31. <a href="https://www.researchgate.net/publication/353355373_Dongfang_Brief_General_Solutions_to_Congruence_Equations">Dongfang Brief General Solutions to Congruence Equations</a></p>
 <p>32. <a href="https://www.researchgate.net/publication/388523548_The_Logical_Entropy_Change_of_Euler_Infinite_Descent_Method">The Logical Entropy Change of Euler Infinite Descent Method</a></p>
-<p>33. <a href="https://www.researchgate.net/publication/389518188_The_End_of_Euler_Proof_of_Cubic_Fermat_Last_Theorem">The End of Euler Proof of Cubic Fermat Last Theorem</a></p>
-<p>34. One of Dongfang Proofs of Cubic Fermat Last Theorem</p>
-<p>35. One of Dongfang Proofs of Quartic Fermat Last Theorem</p>
-<p>36. Dongfang Inequality for Integer Solutions of Fermat Equation</p>
-<p>37. <a href="https://www.researchgate.net/publication/388116362_Dongfang_Elementary_Algebra_of_Fermat_Last_Theorem">Dongfang Elementary Algebra of Fermat Last Theorem</a></p>
-<p>38. Various Incomplete Equivalent Constructions of Pythagorean Triples</p>
-<p>39. Dongfang Solutions of Several Quadratic Diophantine Equations</p>
-<p>40. Dongfang Solution to Sum of Powers of Continuous Natural Numbers</p>
+<p>33. <a href="https://www.researchgate.net/publication/396193089_Dongfang_Special_Comfactor_Solution_to_Euler_Diophantine_Equation">Dongfang Special Comfactor Solution to Euler Diophantine Equation</a></p>
+<p>34. Dongfang Special Coprime Solutions to Euler Diophantine Equation</p>
+<p>35. Dongfang General Comfactor Solutions to Euler Diophantine Equation</p>
+<p>36. Dongfang General Coprime Solutions to Euler Diophantine Equation</p>
+<p>37. <a href="https://www.researchgate.net/publication/389518188_The_End_of_Euler_Proof_of_Cubic_Fermat_Last_Theorem">The End of Euler Proof of Cubic Fermat Last Theorem</a></p>
+<p>38. Dongfang Proof of the Third Power Fermat Last Theorem</p>
+<p>39. Dongfang Proof of the Fourth Power Fermat Last Theorem</p>
+<p>40. Dongfang High-order Solution to Euler Diophantine Equation</p>
 </div>
 </div>
 </td>
@@ -163,7 +369,7 @@ We solemnly declare: Every revolutionary finding published in this journal stand
 
 <tbody>
 <tr>
-<td width="35%" style="text-align: center"><a href="page2024.html"><img src="index_files/2024.jpg" width="72%"  alt="Mathematics &amp; Nature 2024"/></a></td>
+<td width="35%" style="text-align: center"><a href="page2024.html"><img src="index_files/2024.jpg" style="max-width: 200px;" alt="Mathematics &amp; Nature 2024"/></a></td>
 <td width="65%" >
 <div class="container">
 <div class="content">
@@ -180,7 +386,7 @@ We solemnly declare: Every revolutionary finding published in this journal stand
 	
 <tbody>
 <tr>
-<td width="35%" style="text-align: center"><a href="page2023.html"><img src="index_files/2023.jpg" width="72%"  alt="Mathematics &amp; Nature 2023"/></a></td>
+<td width="35%" style="text-align: center"><a href="page2023.html"><img src="index_files/2023.jpg" style="max-width: 200px;" alt="Mathematics &amp; Nature 2023"/></a></td>
 <td width="65%" >
 <div class="container">
 <div class="content">
@@ -197,7 +403,7 @@ We solemnly declare: Every revolutionary finding published in this journal stand
 
 <tbody>
 <tr>
-<td width="35%" style="text-align: center"><a href="page2022.html"><img src="index_files/2022.jpg" width="72%"  alt="Mathematics &amp; Nature 2022"/></a></td>
+<td width="35%" style="text-align: center"><a href="page2022.html"><img src="index_files/2022.jpg" style="max-width: 200px;" alt="Mathematics &amp; Nature 2022"/></a></td>
 <td width="65%" >
 <div class="container">
 <div class="content">
@@ -219,7 +425,7 @@ We solemnly declare: Every revolutionary finding published in this journal stand
 
 <tbody>
 <tr>
-<td width="35%" style="text-align: center"><a href="page2021.html"><img src="index_files/2021.jpg" width="72%"  alt="Mathematics &amp; Nature 2021"/></a></td>
+<td width="35%" style="text-align: center"><a href="page2021.html"><img src="index_files/2021.jpg" style="max-width: 200px;" alt="Mathematics &amp; Nature 2021"/></a></td>
 <td width="65%">
 <div class="container">
 <div class="content">
@@ -241,7 +447,29 @@ We solemnly declare: Every revolutionary finding published in this journal stand
 
 </table>
 
-<div style="text-align: center; background-color: #F8E4AA; color: #082AF1;"><a href="index.html">0</a>&nbsp; &nbsp;<a href="page2021.html">1</a>&nbsp; &nbsp;<a href="page2022.html">2</a>&nbsp; &nbsp;<a href="page2023.html">3</a>&nbsp; &nbsp;<a href="page2024.html">4</a>&nbsp; &nbsp;<a href="page2025.html">5</a>&nbsp; &nbsp;<a href="page2026.html">6</a>&nbsp; &nbsp;<a href="page2027.html">7</a>&nbsp; &nbsp;<a href="page2028.html">8</a>&nbsp; &nbsp;<a href="page2029.html">9</a>&nbsp; &nbsp;<a href="page2030.html">10</a>&nbsp; &nbsp;<a href="page2031.html">11</a>&nbsp; <a href="page2032.html">12</a></div>
+<div style="text-align: center; background-color: #F8E4AA; color: #082AF1; padding: 8px 0; margin-top: 20px;">
+  <div class="nav-menu">
+    <a href="index.html">Home</a><span class="separator">|</span>
+    <a href="page2021.html">2021</a><span class="separator">|</span>
+    <a href="page2022.html">2022</a><span class="separator">|</span>
+    <a href="page2023.html">2023</a><span class="separator">|</span>
+    <a href="page2024.html">2024</a><span class="separator">|</span>
+    <a href="page2025.html">2025</a><span class="separator">|</span>
+    <a href="page2026.html">2026</a><span class="separator">|</span>
+    <a href="page2027.html">2027</a><span class="separator">|</span>
+    <a href="page2028.html">2028</a><span class="separator">|</span>
+    <a href="page2029.html">2029</a><span class="separator">|</span>
+    <a href="page2030.html">2030</a><span class="separator">|</span>
+    <a href="page2031.html">2031</a><span class="separator">|</span>
+    <a href="page2032.html">2032</a><span class="separator">|</span>
+    <a href="page2033.html">2033</a><span class="separator">|</span>
+    <a href="page2034.html">2034</a><span class="separator">|</span>
+    <a href="page2035.html">2035</a><span class="separator">|</span>
+    <a href="page2036.html">2036</a><span class="separator">|</span>
+    <a href="page2037.html">2037</a><span class="separator">|</span>
+    <a href="page2038.html">2038</a><span class="separator">|</span>
+  </div>
+</div>
 </div>
 
 <div class="sidebar-right">
@@ -267,23 +495,13 @@ Mathematics & Nature is a scholarly journal dedicated to publishing the innovati
 
 The published works demonstrate:
 
-Comprehensive theoretical frameworks
-
-Rigorous logical foundations
-
-Novel structural approaches
-
-Methodological innovations
+Comprehensive theoretical frameworks, rigorous logical foundations, novel structural approaches, methodological innovations. 
 
 These technical characteristics naturally enhance the works' resistance to unauthorized replication. The journal maintains a firm commitment to academic integrity and proper attribution practices.
 
 We acknowledge there have been instances of:
 
-Unauthorized usage attempts of this research
-
-Ongoing academic discussions regarding these contributions
-
-Disputes concerning research priority claims
+Unauthorized usage attempts of this research, ongoing academic discussions regarding these contributions, disputes concerning research priority claims.
 
 The scientific community continues to work toward establishing consensus on appropriate standards for recognizing and protecting significant theoretical advances.
 </div>
@@ -296,21 +514,18 @@ The scientific community continues to work toward establishing consensus on appr
 <img src="https://hitwebcounter.com/counter/counter.php?page=13300781&style=0002&nbdigits=9&type=page&initCount=0" title="Counter Widget" alt="counter"  border="0" /></a>
 
 
-
-
 <div style="margin:15px 0; padding:10px; background:#f8f9fa; border-left:3px solid #8E0B3D;">
-    <h3 style="color:#8E0B3D; font-size:16px; margin-top:0; border-bottom:1px dashed #8E0B3D; padding-bottom:5px;">Call for Papers</h3>
-    <h4 style="color:#2A3F8E; font-size:14px; margin-bottom:10px;">Mathematics & Nature - An Interdisciplinary Journal</h4> <!-- 修正a→an -->
+    <h3 style="color:#8E0B3D; font-size:14px; margin-top:0; border-bottom:1px dashed #8E0B3D; padding-bottom:5px;">Call for Papers</h3>
     
-    <p style="font-size:12px; color:#4E4E4E; text-align:justify; margin-bottom:10px;">
+    <p style="font-size:10px; color:#4E4E4E; text-align:justify; margin-bottom:10px;">
         <strong style="color:#2A3F8E;">About the Journal:</strong><br>
         The interdisciplinary journal <em>Mathematics & Nature</em> (ISSN:xxxx-xxxx) dedicates to exploring the intersection of mathematical concepts and natural phenomena. While maintaining rigorous academic standards, we currently operate under an invitation-only submission system for regular articles due to constrained editorial capacity.
-    </p> <!-- 增加期刊名斜体 -->
+    </p>
     
-    <p style="font-size:12px; color:#4E4E4E; text-align:justify; margin-bottom:10px;">
+    <p style="font-size:10px; color:#4E4E4E; text-align:justify; margin-bottom:10px;">
         <strong style="color:#2A3F8E;">Submission Policy:</strong>
     </p>
-    <ul style="font-size:12px; color:#4E4E4E; padding-left:15px; margin-bottom:10px; list-style-type:none;"> <!-- 取消默认圆点 -->
+    <ul style="font-size:10px; color:#4E4E4E; padding-left:15px; margin-bottom:10px; list-style-type:none;">
         <li>• Regular submissions are by invitation only</li>
         <li>• We welcome two types of unsolicited contributions:
             <ul style="padding-left:15px; list-style-type:none;">
@@ -320,19 +535,17 @@ The scientific community continues to work toward establishing consensus on appr
         </li>
     </ul>
     
-    <p style="font-size:12px; color:#4E4E4E; text-align:justify; margin-bottom:5px;">
+    <p style="font-size:10px; color:#4E4E4E; text-align:justify; margin-bottom:5px;">
         <strong style="color:#2A3F8E;">Submission Guidelines:</strong><br>
         Authors interested in submitting either refutation papers or theory development papers should send the manuscript with a Chinese translation to:
     </p>
-    <p style="font-size:12px; color:#2A3F8E; margin-bottom:5px;">
-        <strong>Email:</strong> <a href="mailto:manuscripts@mathnature.net" style="color:#2A3F8E; text-decoration:none; border-bottom:1px dotted #2A3F8E;">manuscripts@mathnature.net</a> <!-- 增加链接下划线 -->
+    <p style="font-size:10px; color:#2A3F8E; margin-bottom:5px;">
+        <strong>Email:</strong> <a href="mailto:manuscripts@mathnature.net" style="color:#2A3F8E; text-decoration:none; border-bottom:1px dotted #2A3F8E;">manuscripts@mathnature.net</a>
     </p>
-    <p style="font-size:12px; color:#2A3F8E; margin-bottom:0;">
+    <p style="font-size:10px; color:#2A3F8E; margin-bottom:0;">
         <strong>Website:</strong> <a href="https://www.mathnature.net/" target="_blank" style="color:#2A3F8E; text-decoration:none; border-bottom:1px dotted #2A3F8E;">https://www.mathnature.net/</a>
     </p>
 </div>
-
-
 
 
 <p style="text-align:center; font-size:9px; color:#7E072C; border-top:1px dashed #920306; padding-top:8px; margin:15px 5px 0; font-family:Cambria, serif;">
@@ -364,9 +577,9 @@ The scientific community continues to work toward establishing consensus on appr
   }
 </style>
 
-<div style="font-size: 0.8em; border-top: 1px solid #eee; padding-top: 10px;">
+<div class="footer">
   <p>*Mathematics & Nature* © 2021-<script>document.write(new Date().getFullYear())</script> All rights reserved.<br>
-<span style="color:#888; font-size:0.9em;">
+<span style="color:#888; font-size: 10px;">
   • Independent non-profit research initiative •
 </span>
 </p>
@@ -377,9 +590,213 @@ The scientific community continues to work toward establishing consensus on appr
 
 </div>
 
+</div><!-- 国际版双栏浮动提示（完整版） -->
+<div id="ai-guide-float" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; max-width: 380px;">
+  <div style="background: white; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); border: 1px solid #e9ecef; overflow: hidden; animation: floatSlideIn 0.5s ease-out;">
+    <!-- 头部标题 -->
+    <div style="padding: 15px; border-bottom: 1px solid #f8f9fa; background: linear-gradient(135deg, #1a73e8, #1557b0);">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="background: white; color: #1a73e8; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">
+          🔬
+        </div>
+        <div style="flex: 1; min-width: 0;">
+          <h4 style="margin: 0; color: white; font-size: 15px; font-weight: 600; font-family: 'Arial', 'Helvetica', sans-serif; letter-spacing: -0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            AI Review Guide
+          </h4>
+          <p style="margin: 2px 0 0 0; color: rgba(255,255,255,0.9); font-size: 11.5px; font-family: 'Arial', 'Helvetica', sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            Standardized Review Protocol
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 中英文双栏内容 -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 140px;">
+      <!-- 英文栏 -->
+      <div style="padding: 15px; border-right: 1px solid #f8f9fa; display: flex; flex-direction: column;">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+         <h5 style="margin: 0 0 8px 0; color: #1a73e8; font-size: 10.6px; font-weight: bold; background: linear-gradient(135deg, #e8f4f8, #d1e7f5);">Transparent Academic Review</h5>
+          <p style="margin: 0; color: #5D6D7E; font-size: 11px; line-height: 1.4;">
+            Standardized AI protocol for mathematical rigor and logical consistency in peer review process.
+          </p>
+        </div>
+        <a href="https://mathnature.github.io/AI-Review-Guide-en.html" target="_blank" style="display: block; padding: 8px 12px; background: #1a73e8; color: white; text-decoration: none; border-radius: 6px; text-align: center; font-size: 12px; font-weight: bold; transition: all 0.2s; margin-top: auto;">
+          English Guide
+        </a>
+      </div>
+      
+      <!-- 中文栏 -->
+      <div style="padding: 15px; background: #f8f9fa; display: flex; flex-direction: column;">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+          <h5 style="margin: 0 0 8px 0; color: #2C3E50; font-size: 13px; font-weight: bold;">透明学术审稿</h5>
+          <p style="margin: 0; color: #5D6D7E; font-size: 11px; line-height: 1.4;">
+            标准化AI审稿协议<br>确保数学严谨性与逻辑一致性
+          </p>
+        </div>
+        <a href="https://mathnature.github.io/AI-Review-Guide-cn.html" target="_blank" style="display: block; padding: 8px 12px; background: #2C3E50; color: white; text-decoration: none; border-radius: 6px; text-align: center; font-size: 12px; font-weight: bold; transition: all 0.2s; margin-top: auto;">
+          中文指南
+        </a>
+      </div>
+    </div>
+    
+    <!-- 操作按钮 -->
+    <div style="padding: 12px 15px; background: #f8f9fa; border-top: 1px solid #e9ecef; display: flex; justify-content: space-between; align-items: center;">
+      <button onclick="hideForSession()" style="background: none; border: none; color: #5D6D7E; font-size: 11px; cursor: pointer; padding: 6px 12px; border-radius: 4px; transition: background 0.2s; display: flex; align-items: center; gap: 4px;">
+        <span>⏰</span> Remind Later
+      </button>
+      <button onclick="closeFloat()" style="background: none; border: none; color: #5D6D7E; font-size: 11px; cursor: pointer; padding: 6px 12px; border-radius: 4px; transition: background 0.2s; display: flex; align-items: center; gap: 4px;">
+        <span>✕</span> Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes floatSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+#ai-guide-float a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#ai-guide-float button:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  #ai-guide-float {
+    max-width: 320px;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  #ai-guide-float > div > div {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  #ai-guide-float > div > div > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid #f8f9fa;
+  }
+  
+  #ai-guide-float > div > div > div:last-child {
+    background: white;
+  }
+  
+  #ai-guide-float > div > div > div:last-child > div {
+    text-align: left;
+  }
+}
+</style>
+
+<script>
+class InternationalFloat {
+  constructor() {
+    this.float = document.getElementById('ai-guide-float');
+    this.init();
+  }
+  
+  init() {
+    // 检查用户语言偏好
+    const userLang = this.detectUserLanguage();
+    this.adaptToUserLanguage(userLang);
+    
+    // 检查是否在当前会话中已经隐藏
+    if (sessionStorage.getItem('aiGuideHidden')) {
+      this.float.style.display = 'none';
+      return;
+    }
+    
+    // 延迟显示，让用户先浏览内容
+    setTimeout(() => {
+      this.show();
+    }, 5000);
+  }
+  
+  detectUserLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    
+    return urlLang || browserLang;
+  }
+  
+  adaptToUserLanguage(lang) {
+    if (lang.startsWith('zh')) {
+      // 中文用户：调整按钮文字
+      const buttons = document.querySelectorAll('#ai-guide-float button');
+      if (buttons[0]) buttons[0].innerHTML = '<span>⏰</span> 稍后提醒';
+      if (buttons[1]) buttons[1].innerHTML = '<span>✕</span> 关闭';
+    }
+  }
+  
+  show() {
+    this.float.style.display = 'block';
+    
+    // 15秒后自动缩小为图标
+    setTimeout(() => {
+      this.minimize();
+    }, 15000);
+  }
+  
+  minimize() {
+    const content = this.float.querySelector('div > div');
+    if (content.style.display !== 'none') {
+      this.float.innerHTML = `
+        <div style="background: linear-gradient(135deg, #1a73e8, #1557b0); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s;" 
+             onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="expandFloat()" title="AI Review Guide">
+          🔬
+        </div>
+      `;
+    }
+  }
+}
+
+// 全局函数
+function hideForSession() {
+  sessionStorage.setItem('aiGuideHidden', 'true');
+  document.getElementById('ai-guide-float').style.display = 'none';
+}
+
+function closeFloat() {
+  document.getElementById('ai-guide-float').style.display = 'none';
+}
+
+function expandFloat() {
+  location.reload();
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+  new InternationalFloat();
+});
+
+// 用户交互行为监测
+let userActivity = false;
+document.addEventListener('click', () => userActivity = true);
+document.addEventListener('scroll', () => userActivity = true);
+
+// 用户离开页面时显示（如果已最小化）
+document.addEventListener('mouseleave', (e) => {
+  if (e.clientY < 0 && userActivity) {
+    const float = document.getElementById('ai-guide-float');
+    if (float.innerHTML.includes('width: 50px')) {
+      expandFloat();
+    }
+  }
+});
+</script>
+
 </body>
 </html>
-
-
-
-
